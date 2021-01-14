@@ -15,7 +15,7 @@ build:
     - planet=planet.scripts:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
