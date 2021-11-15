@@ -9,7 +9,7 @@ source:
   sha256: 6460323b53b9a632aed6331c9fbc99877b2e5841c62682f61f5d190b8f3a0522
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - planet=planet.scripts:main
