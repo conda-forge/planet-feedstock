@@ -1,4 +1,4 @@
-{% set version = "1.4.9" %}
+{% set version = "1.4.10" %}
 
 package:
   name: planet
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/planet/planet-{{ version }}.tar.gz
-  sha256: c779bb923fa3ddbfb271de40d925b2370663588575e6f829ab1a63119817fa7b
+  sha256: 289a839ff1a57a51eda1a696320bfe6161c17c0777569453d0dadd57977ed6b3
 
 build:
   number: 0
