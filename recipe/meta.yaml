@@ -24,7 +24,7 @@ requirements:
     - click
     - pywin32 >=1.0  # [win]
     - requests
-    - requests-futures ==0.9.7
+    - requests-futures
 
 test:
   imports:
