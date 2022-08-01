@@ -22,18 +22,16 @@ requirements:
     - python
     - setuptools
     - click
-    - pywin32 >=1.0  # [win]
+    - pywin32 >=1.0
     - requests
     - requests-futures
 
 test:
   imports:
     - planet
-    - planet.api
-    - planet.scripts
   commands:
-    - planet --help
     - pip check
+    - planet --help
   requires:
     - pip
 
