@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@sgillies](https://github.com/sgillies/)
 
