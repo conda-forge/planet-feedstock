@@ -1,5 +1,5 @@
 {% set name = "planet" %}
-{% set version = "1.5.2" %}
+{% set version = "2.0a6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,26 +7,27 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/planet-{{ version }}.tar.gz
-  sha256: 44991e49da8c5ea95760dc3f18f0533870540a76c598e1194a55a16fdbf2d42c
+  sha256: a37b3c007cfd2b9b71a727bd876caf439c570e4b863cd5cafae3061f86f8524a
 
 build:
   noarch: python
   entry_points:
-    - planet = planet.scripts:main
+    - planet = planet.cli.cli:main
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
-    - click
-    - requests
-    - requests-futures <1.0
-    - pywin32 >=1.0
-
+    - python >=3.7
+    - click >=8.0
+    - geojson
+    - httpx >=0.23.0
+    - jsonschema
+    - pyjwti >=2.1
+    - tqdm >=4.56
 test:
   imports:
     - planet
@@ -45,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - ocefpaf
+    - sgillies
