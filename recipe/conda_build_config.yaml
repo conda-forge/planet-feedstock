@@ -1,3 +1,2 @@
 channel_targets:
-  - planet_dev
-
+  - conda-forge planet_dev
