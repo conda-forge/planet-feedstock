@@ -1,5 +1,5 @@
 {% set name = "planet" %}
-{% set version = "2.0.0rc1" %}
+{% set version = "2.0.0rc2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/planet-{{ version }}.tar.gz
-  sha256: a340e57f8bd1c2a9db173886361b88f42413840121b85d5933093c2d2a9805bb
+  sha256: f2cd962f48454e243769dfdb0143df21844df6c4056fd273e82725f87d27bc97
 
 build:
   noarch: python
@@ -28,6 +28,7 @@ requirements:
     - jsonschema
     - pyjwt >=2.1
     - tqdm >=4.56
+    - typing-extensions
 test:
   imports:
     - planet
