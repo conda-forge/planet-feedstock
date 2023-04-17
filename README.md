@@ -1,11 +1,11 @@
-About planet
-============
+About planet-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/planet-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/planetlabs/planet-client-python
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/planet-feedstock/blob/main/LICENSE.txt)
 
 Summary: Planet API Client
 
@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@sgillies](https://github.com/sgillies/)
 
