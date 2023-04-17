@@ -1,5 +1,5 @@
 {% set name = "planet" %}
-{% set version = "1.5.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/planet-{{ version }}.tar.gz
-  sha256: 44991e49da8c5ea95760dc3f18f0533870540a76c598e1194a55a16fdbf2d42c
+  sha256: ec6c8da7e1034073d29ef86d66aa9737f941db05b0509bdcd39b4775ba060674
 
 build:
   noarch: python
