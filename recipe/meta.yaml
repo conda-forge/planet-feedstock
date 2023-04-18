@@ -14,7 +14,7 @@ build:
   entry_points:
     - planet = planet.cli.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - python >=3.7
     - click >=8.0
     - geojson
-    - httpx ==0.23.0
+    - httpx >=0.23.0
     - jsonschema
     - pyjwt >=2.1
     - tqdm >=4.56
