@@ -145,5 +145,3 @@ Feedstock Maintainers
 
 * [@jreiberkyle](https://github.com/jreiberkyle/)
 * [@ocefpaf](https://github.com/ocefpaf/)
-* [@sgillies](https://github.com/sgillies/)
-
