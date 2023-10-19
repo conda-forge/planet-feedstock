@@ -46,5 +46,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - pl-gideon
+    - asonnenschein
     - jreiberkyle
     - ocefpaf
