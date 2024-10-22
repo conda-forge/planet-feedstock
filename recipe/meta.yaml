@@ -1,24 +1,25 @@
 {% set name = "planet" %}
-{% set version = "2.10.0" %}
+{% set version = "2.11.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/planet-{{ version }}.tar.gz
-  sha256: a5691bdf1093b3c65714e9c9a39671ba59ece24f17a3eb42c5f4e965863a8185
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/planet-{{ version }}.tar.gz
+  sha256: 5d0813724ec9d61336a5c15d8d97c78b78bd410c785dd14e277b5986c06e6d8c
 
 build:
-  noarch: python
   entry_points:
-    - planet = planet.cli.cli:main
-  script: {{ PYTHON }} -m pip install . -vv
+    - planet=planet.cli.cli:main
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
     - python >=3.7
+    - setuptools
     - pip
   run:
     - python >=3.7
