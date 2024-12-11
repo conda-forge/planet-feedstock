@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
     - typing_extensions
-    - python >=3.7
+    - python >={{ python_min }}
     - click >=8.0
     - geojson
     - httpx <0.28.0
@@ -38,6 +38,7 @@ test:
     - pip check
     - planet --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
