@@ -1,5 +1,5 @@
 {% set name = "planet" %}
-{% set version = "2.11.0" %}
+{% set version = "2.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/planet-{{ version }}.tar.gz
-  sha256: 5d0813724ec9d61336a5c15d8d97c78b78bd410c785dd14e277b5986c06e6d8c
+  sha256: 0c640b4aaf6cf454e1ab1cfc4e25d4dbd426ca521960016411684a4bae678b2d
 
 build:
   entry_points:
@@ -18,14 +18,15 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.7
+    - typing_extensions
+    - python >={{ python_min }}
     - click >=8.0
     - geojson
-    - httpx >=0.23.0
+    - httpx <0.28.0
     - jsonschema
     - pyjwt >=2.1
     - tqdm >=4.56
@@ -37,6 +38,7 @@ test:
     - pip check
     - planet --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
