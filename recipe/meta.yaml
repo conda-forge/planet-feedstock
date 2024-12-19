@@ -1,5 +1,5 @@
 {% set name = "planet" %}
-{% set version = "2.12.0" %}
+{% set version = "2.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/planet-{{ version }}.tar.gz
-  sha256: 0c640b4aaf6cf454e1ab1cfc4e25d4dbd426ca521960016411684a4bae678b2d
+  sha256: 75179da3e21a22eb1f8cf5dfbb5fd4d72463a6e5f172a374e07f49821418f2c1
 
 build:
   entry_points:
