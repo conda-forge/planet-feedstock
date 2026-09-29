@@ -1,0 +1,62 @@
+schema_version: 1
+
+context:
+  version: "3.7.0"
+
+package:
+  name: planet
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/p/planet/planet-${{ version }}.tar.gz
+  sha256: 81e8aa4a5c5fd083f30b4790175d9c4adf163770abc19d6ca9bb530d191b8f28
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - planet = planet.cli.cli:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=64
+    - setuptools-scm >=8
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - click >=8.0,!=8.2.1
+    - geojson
+    - httpx >=0.28.0
+    - jsonschema
+    - pyjwt >=2.1
+    - tqdm >=4.56
+    - typing_extensions
+    - planet-auth >=2.3.0
+
+tests:
+  - python:
+      imports:
+        - planet
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - planet --help
+
+about:
+  summary: Planet SDK for Python
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://pypi.org/project/planet/
+
+extra:
+  recipe-maintainers:
+    - pl-gideon
+    - ocefpaf
